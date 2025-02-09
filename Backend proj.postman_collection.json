@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "6619977f-f1a2-411e-a8c8-35644644dfb6",
+		"name": "Backend proj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38283415"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get User Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/posts/67a8dabdccdcf90f9840ec6b",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"posts",
+								"67a8dabdccdcf90f9840ec6b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4ZGFiZGNjZGNmOTBmOTg0MGVjNmIiLCJpYXQiOjE3MzkxMTkyOTMsImV4cCI6MTczOTEyMjg5M30.NkCrpmJFsQSCeDdkQEdGDorBYQh2-pfpQSGEVnhuNa4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/posts/me",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"posts",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4ZGFjMmNjZGNmOTBmOTg0MGVjNzAiLCJpYXQiOjE3MzkxMTkyOTgsImV4cCI6MTczOTEyMjg5OH0.jOV8J8s9TSZrS2TBVVFgLYCvNwgm9NUooIKSodZM-IQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/posts/me/67a8e3f65c0dcaece84081e6",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"posts",
+								"me",
+								"67a8e3f65c0dcaece84081e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4ZGFiZGNjZGNmOTBmOTg0MGVjNmIiLCJpYXQiOjE3MzkxMTkyOTMsImV4cCI6MTczOTEyMjg5M30.NkCrpmJFsQSCeDdkQEdGDorBYQh2-pfpQSGEVnhuNa4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"updated22 post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/posts/me/67a8e3f65c0dcaece84081e6",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"posts",
+								"me",
+								"67a8e3f65c0dcaece84081e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test11@gmail.com\",\r\n    \"password\": \"Qwer123@\",\r\n    \"nickname\": \"Test11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/auth/sign-up",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "skete2002@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "qweqwe",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"Qwer123@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/auth/sign-in",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth",
+						"sign-in"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "skete2002@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "qweqwe",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loguot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YWRlZWQwNmM5NWJhZTcxNzNlOWYiLCJpYXQiOjE3MzkxMDc4MjIsImV4cCI6MTczOTExMTQyMn0.KKGVWXXDzuHw0YfgylXSKJoZbL7X__kE7amQAkCydSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/auth/logout",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YThmNjc4YTZmMTZhZTY1ZDZiMGIiLCJpYXQiOjE3MzkxMDY1NTAsImV4cCI6MTczOTExMDE1MH0.M74kCRBKJCmWD-_TBLdF4Lpyh0d5AEHO7bxw2VjJrdw",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YWRlZWQwNmM5NWJhZTcxNzNlOWYiLCJpYXQiOjE3MzkxMTAxMTEsImV4cCI6MTczOTExMzcxMX0.Ydf6i69Unwi7ZtXZXoMXZCIMwdUYEC8nJkSQW0NfqnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/users/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YWRlZWQwNmM5NWJhZTcxNzNlOWYiLCJpYXQiOjE3MzkxMTAxMTEsImV4cCI6MTczOTExMzcxMX0.Ydf6i69Unwi7ZtXZXoMXZCIMwdUYEC8nJkSQW0NfqnY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/users/67a8b89984adfac5a51df3db",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users",
+						"67a8b89984adfac5a51df3db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YzIyNjU2NDMxZjM5NzViMzZhMjciLCJpYXQiOjE3MzkxMTI5OTgsImV4cCI6MTczOTExNjU5OH0.4Wh9bQj22OgNnocWSqt1xdhG0gdr_dZPtB7DRGbedYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\": \"TestUpdate\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/users/me",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YzIyYjU2NDMxZjM5NzViMzZhMmMiLCJpYXQiOjE3MzkxMTMwMDMsImV4cCI6MTczOTExNjYwM30.4YEvw0KbT602bSUTBmRPJMb0pRD68ySSfKAUCnwN1dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/users/me",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E4YzIyZjU2NDMxZjM5NzViMzZhMzEiLCJpYXQiOjE3MzkxMTMwMDcsImV4cCI6MTczOTExNjYwN30.5fC4_JDcVm_w_8LVDKJIrKK6V4WrVoVdjwJXDpzr8E0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/users/?search=test&order=DESC&orderBy=email",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "test"
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						},
+						{
+							"key": "orderBy",
+							"value": "email"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:3001"
+		}
+	]
+}
